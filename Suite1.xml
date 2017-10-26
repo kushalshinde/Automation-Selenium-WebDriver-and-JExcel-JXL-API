@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1_Flights">
+
+<!-- If add more test cases In this suite, You need to add them as bellow. -->
+
+<test name="SuiteOneCaseOne">
+    <classes>
+        <class name="com.project.SuiteOne.SuiteOneCaseOne" ></class>  
+    </classes>
+</test>
+</suite>

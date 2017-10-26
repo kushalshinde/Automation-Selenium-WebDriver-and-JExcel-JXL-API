@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1_Flights]">
+  <test name="SuiteOneCaseOne(failed)">
+    <classes>
+      <class name="com.project.SuiteOne.SuiteOneCaseOne">
+        <methods>
+          <include name="run"/>
+        </methods>
+      </class> <!-- com.project.SuiteOne.SuiteOneCaseOne -->
+    </classes>
+  </test> <!-- SuiteOneCaseOne(failed) -->
+</suite> <!-- Failed suite [Suite1_Flights] -->
