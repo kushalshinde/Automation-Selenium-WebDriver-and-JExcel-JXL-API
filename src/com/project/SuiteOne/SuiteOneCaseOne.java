@@ -32,7 +32,7 @@ public class SuiteOneCaseOne extends SuiteBase {
 		int m = 2;
 		for(Entry<Integer, ArrayList<Integer>> e : map.entrySet()) {
 			Integer key = e.getKey();		
-			for(Integer s : e.getValue()) 
+			for(Integer s : e.getValue())
 				writeintoExcel(key, s, divelement, m++);
 		}
 	}
@@ -68,12 +68,13 @@ public class SuiteOneCaseOne extends SuiteBase {
 		Label p1 = new Label(1,m, phone);
 		Label hl1 = new Label(3,m,hyperlink);
 		Label e1 = new Label(2, m, email);
+
 		writableSheet.addCell(n1);
 		writableSheet.addCell(p1);
 		writableSheet.addCell(hl1);
 		writableSheet.addCell(e1);
 				
-		}
+	}
 	
 	@AfterTest
 	public void tearDown() throws Exception {
