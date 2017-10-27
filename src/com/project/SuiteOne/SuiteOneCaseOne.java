@@ -55,14 +55,11 @@ public class SuiteOneCaseOne extends SuiteBase {
 	}
 	
 	public void writeintoExcel(Integer key, Integer s, int divelement, int m) throws Exception, WriteException {
-		String name = "";
-		String phone = "";
-		String hyperlink = "";
-		String email = "";
-		name = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getText();
-		phone = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[3]")).getText();
-		hyperlink = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getAttribute("href");
-		email = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[4]/a/span")).getText();
+		
+		String name = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getText();
+		String phone = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[3]")).getText();
+		String hyperlink = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getAttribute("href");
+		String email = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[4]/a/span")).getText();
 			
 		Label n1 = new Label(0,m,name);
 		Label p1 = new Label(1,m, phone);
