@@ -27,33 +27,14 @@ public class SuiteOneCaseOne extends SuiteBase {
 	
 	@Test
 	public void newrun() throws Exception, WriteException {
-		String name1 = "";
-		String phone1 = "";
-		String hyperlink1 = "";
-		String email = "";
+		
+		int divelement=1;
 		int m = 2;
 		for(Entry<Integer, ArrayList<Integer>> e : map.entrySet()) {
 			Integer key = e.getKey();		
 			for(Integer s : e.getValue()) {
-				name1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[1]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getText();
-				phone1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[1]/div/div["+key+"]/div["+s+"]/div/div[3]")).getText();
-				hyperlink1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[1]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getAttribute("href");
-				email = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[1]/div/div["+key+"]/div["+s+"]/div/div[4]/a/span")).getText();
-					
-				Label n1 = new Label(0,m,name1);
-				Label p1 = new Label(1,m, phone1);
-				Label hl1 = new Label(3,m,hyperlink1);
-				Label e1 = new Label(2, m, email);
+				writeintoExcel(key, s, divelement, m);
 				m++;
-				writableSheet.addCell(n1);
-				writableSheet.addCell(p1);
-				writableSheet.addCell(hl1);
-				writableSheet.addCell(e1);
-						
-				name1="";
-				phone1 = "";
-				hyperlink1="";
-				email = "";
 			}
 		}
 	}
@@ -63,40 +44,40 @@ public class SuiteOneCaseOne extends SuiteBase {
 		
 		Label techingfaculty = new Label(0,43,"TEACHING FACULTY");
 		writableSheet.addCell(techingfaculty);
-		String name2 = "";
-		String phone2 = "";
-		String hyperlink2 = "";
-		String email2 = "";
-		
-		int n = 44;
+		int divelement=2;
+		int m = 44;
 		
 		for(Entry<Integer, ArrayList<Integer>> e : map.entrySet()) {
 			Integer key = e.getKey();		
 			if(key>=2 && key<=12) {
 				for(Integer s : e.getValue()) {
-					name2 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[2]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getText();
-					phone2 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[2]/div/div["+key+"]/div["+s+"]/div/div[3]")).getText();
-					hyperlink2 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[2]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getAttribute("href");
-					email2 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div[2]/div/div["+key+"]/div["+s+"]/div/div[4]/a/span")).getText();
-						
-					Label n2 = new Label(0,n,name2);
-					Label p2 = new Label(1,n, phone2);
-					Label hl2 = new Label(3,n,hyperlink2);
-					Label e2 = new Label(2, n, email2);
-					n++;
-					writableSheet.addCell(n2);
-					writableSheet.addCell(p2);
-					writableSheet.addCell(hl2);
-					writableSheet.addCell(e2);
-							
-					name2="";
-					phone2 = "";
-					hyperlink2="";
-					email2 = "";
+					writeintoExcel(key, s, divelement, m);
+					m++;
 				}
 			}
 		}
 	}
+	
+	public void writeintoExcel(Integer key, Integer s, int divelement, int m) throws Exception, WriteException {
+		String name1 = "";
+		String phone1 = "";
+		String hyperlink1 = "";
+		String email = "";
+		name1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getText();
+		phone1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[3]")).getText();
+		hyperlink1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[2]/a")).getAttribute("href");
+		email = driver.findElement(By.xpath("html/body/div[3]/div[1]/div["+divelement+"]/div/div["+key+"]/div["+s+"]/div/div[4]/a/span")).getText();
+			
+		Label n1 = new Label(0,m,name1);
+		Label p1 = new Label(1,m, phone1);
+		Label hl1 = new Label(3,m,hyperlink1);
+		Label e1 = new Label(2, m, email);
+		writableSheet.addCell(n1);
+		writableSheet.addCell(p1);
+		writableSheet.addCell(hl1);
+		writableSheet.addCell(e1);
+				
+		}
 	
 	@AfterTest
 	public void tearDown() throws Exception {

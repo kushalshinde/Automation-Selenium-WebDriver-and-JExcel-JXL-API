@@ -26,7 +26,7 @@ public class SuiteBase {
 	public static Map<Integer, ArrayList<Integer>> map = new TreeMap<Integer, ArrayList<Integer>>();
 	
 	public void loadWebBrowser() throws Exception{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\kusha\\eclipse-workspace\\SeleniumProject\\JarFiles\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\kusha\\eclipse-workspace\\Selenium-JXL API\\JarFiles\\chromedriver.exe");
 			if(!BrowseralreadyLoaded && !Excelcreated){		
 				ChromeOptions options = new ChromeOptions(); 
 				options.addArguments("disable-infobars"); 
@@ -38,7 +38,7 @@ public class SuiteBase {
 				driver.get("https://www.cs.rutgers.edu/people/directory.php?type=faculty");
 				waitFor(2000);
 				
-				exlFile = new File("C:\\Users\\kusha\\eclipse-workspace\\SeleniumProject\\src\\com\\project\\ExcelFiles\\rutgers.xls");
+				exlFile = new File("C:\\Users\\kusha\\eclipse-workspace\\Selenium-JXL API\\src\\com\\project\\ExcelFiles\\rutgers.xls");
 				writableWorkbook = Workbook.createWorkbook(exlFile);
 				writableSheet = writableWorkbook.createSheet("Sheet1", 0);
 				
