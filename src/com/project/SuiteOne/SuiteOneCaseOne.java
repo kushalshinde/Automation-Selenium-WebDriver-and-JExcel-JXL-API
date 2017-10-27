@@ -32,10 +32,8 @@ public class SuiteOneCaseOne extends SuiteBase {
 		int m = 2;
 		for(Entry<Integer, ArrayList<Integer>> e : map.entrySet()) {
 			Integer key = e.getKey();		
-			for(Integer s : e.getValue()) {
-				writeintoExcel(key, s, divelement, m);
-				m++;
-			}
+			for(Integer s : e.getValue()) 
+				writeintoExcel(key, s, divelement, m++);
 		}
 	}
 	
@@ -50,10 +48,8 @@ public class SuiteOneCaseOne extends SuiteBase {
 		for(Entry<Integer, ArrayList<Integer>> e : map.entrySet()) {
 			Integer key = e.getKey();		
 			if(key>=2 && key<=12) {
-				for(Integer s : e.getValue()) {
-					writeintoExcel(key, s, divelement, m);
-					m++;
-				}
+				for(Integer s : e.getValue())
+					writeintoExcel(key, s, divelement, m++);
 			}
 		}
 	}
