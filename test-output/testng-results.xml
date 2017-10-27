@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24303" started-at="2017-10-25T18:57:15Z" finished-at="2017-10-25T18:57:39Z">
+  <suite name="Default suite" duration-ms="24980" started-at="2017-10-27T14:18:45Z" finished-at="2017-10-27T14:19:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24303" started-at="2017-10-25T18:57:15Z" finished-at="2017-10-25T18:57:39Z">
+    <test name="Default test" duration-ms="24980" started-at="2017-10-27T14:18:45Z" finished-at="2017-10-27T14:19:10Z">
       <class name="com.project.SuiteOne.SuiteOneCaseOne">
-        <test-method status="PASS" signature="runFirst()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="runFirst" is-config="true" duration-ms="14317" started-at="2017-10-25T14:57:15Z" finished-at="2017-10-25T14:57:29Z">
+        <test-method status="PASS" signature="runFirst()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="runFirst" is-config="true" duration-ms="15463" started-at="2017-10-27T10:18:45Z" finished-at="2017-10-27T10:19:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runFirst -->
-        <test-method status="PASS" signature="newrun()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="newrun" duration-ms="6180" started-at="2017-10-25T14:57:29Z" finished-at="2017-10-25T14:57:35Z">
+        <test-method status="PASS" signature="newrun()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="newrun" duration-ms="6025" started-at="2017-10-27T10:19:00Z" finished-at="2017-10-27T10:19:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newrun -->
-        <test-method status="PASS" signature="techingfaculty()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="techingfaculty" duration-ms="1608" started-at="2017-10-25T14:57:35Z" finished-at="2017-10-25T14:57:37Z">
+        <test-method status="PASS" signature="techingfaculty()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="techingfaculty" duration-ms="1317" started-at="2017-10-27T10:19:06Z" finished-at="2017-10-27T10:19:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- techingfaculty -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="tearDown" is-config="true" duration-ms="2182" started-at="2017-10-25T14:57:37Z" finished-at="2017-10-25T14:57:39Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.project.SuiteOne.SuiteOneCaseOne@d8355a8]" name="tearDown" is-config="true" duration-ms="2175" started-at="2017-10-27T10:19:08Z" finished-at="2017-10-27T10:19:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

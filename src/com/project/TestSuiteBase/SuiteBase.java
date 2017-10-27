@@ -3,7 +3,6 @@ package com.project.TestSuiteBase;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.io.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -109,12 +108,4 @@ public class SuiteBase {
         }
     }
 	
-	public boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
 }
